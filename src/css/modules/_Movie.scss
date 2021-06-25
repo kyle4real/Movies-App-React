@@ -14,6 +14,8 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
     &__info {
         display: flex;
@@ -23,12 +25,22 @@
 
         .info__title {
             margin: 0;
-            font-size: 1rem;
+            font-size: 0.89rem;
+            line-height: 1.2;
         }
 
         .info__vote-average {
-            display: inline;
-            margin-left: 0.5rem;
+            margin-left: 1rem;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 0.78rem;
+            background: $bgColor;
         }
     }
 
