@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #1a1361;
+  background: #331c1c;
   font-family: "Poppins", sans-serif;
   color: #f7f7f7;
 }
@@ -33,7 +33,7 @@ img {
 header {
   z-index: 1000;
   width: 100%;
-  background: #4435d8;
+  background: #965252;
   height: 6rem;
   margin-bottom: 3rem;
 }
@@ -47,16 +47,16 @@ header {
 
 .search__bar {
   border-radius: 50px;
-  border: 2px solid #1a1361;
+  border: 2px solid #331c1c;
   outline: none;
   font-family: inherit;
   font-size: 1.2rem;
-  color: #e0e0e0;
+  color: #f7f7f7;
   background: transparent;
   padding: 0.5rem 1.5rem;
 }
 .search__bar::placeholder {
-  color: #1a1361;
+  color: #331c1c;
 }
 
 .movie__container {
@@ -69,7 +69,7 @@ header {
 .movie {
   width: 230px;
   margin: 1rem;
-  background: #4435d8;
+  background: #965252;
   border-radius: 3px;
   box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -91,8 +91,8 @@ header {
   margin-left: 0.5rem;
 }
 .movie .movie--over {
-  background: #e0e0e0;
-  color: #1a1361;
+  background: rgba(224, 224, 224, 0.9);
+  color: #331c1c;
   padding: 1rem;
   position: absolute;
   bottom: 0;
