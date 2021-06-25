@@ -1,0 +1,19 @@
+@import "./modules/variables";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $bgColor;
+    font-family: $fontStack;
+    color: $textColor;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@import "./modules/Movie";
