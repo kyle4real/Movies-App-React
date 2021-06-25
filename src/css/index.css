@@ -30,6 +30,35 @@ img {
   }
 }
 
+header {
+  z-index: 1000;
+  width: 100%;
+  background: #4435d8;
+  height: 6rem;
+  margin-bottom: 3rem;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search__bar {
+  border-radius: 50px;
+  border: 2px solid #1a1361;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+}
+.search__bar::placeholder {
+  color: #1a1361;
+}
+
 .movie__container {
   width: 100%;
   display: flex;
@@ -40,19 +69,18 @@ img {
 .movie {
   width: 230px;
   margin: 1rem;
-  background: #251b8c;
+  background: #4435d8;
   border-radius: 3px;
   box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .movie__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: relative;
-  background: #251b8c;
 }
 .movie__info .info__title {
   margin: 0;
