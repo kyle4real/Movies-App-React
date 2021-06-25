@@ -10,19 +10,23 @@ const setVoteBorder = (vote) => {
     }
 };
 
-function Movie({ title, poster_path, overview, vote_average }) {
+function Movie({ title, poster_path, overview, vote_average, release_date }) {
+    const year = new Date(release_date).getFullYear();
     return (
         <div className="movie" style={poster_path ? {} : { display: "none" }}>
             <div className="movie__img-container">
                 <img src={IMG_API + poster_path} alt={title} />
             </div>
             <div className="movie__info">
-                <h3 className="info__title">{title}</h3>
+                <div>
+                    <h3 className="info__title">{title}</h3>
+                    <div className="info__year">{year}</div>
+                </div>
                 <p
                     className={`info__vote-average`}
                     style={{ borderColor: setVoteBorder(vote_average) }}
                 >
-                    {vote_average}
+                    {vote_average || "N/A"}
                 </p>
             </div>
             <div className="movie--over">

@@ -54,9 +54,13 @@ header {
   color: #f7f7f7;
   background: transparent;
   padding: 0.5rem 1.5rem;
+  transition: background 0.2s ease;
 }
 .search__bar::placeholder {
   color: #331c1c;
+}
+.search__bar:focus {
+  background: #754040;
 }
 
 .movie__container {
@@ -77,17 +81,23 @@ header {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .movie__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.75rem 1.25rem;
 }
 .movie__info .info__title {
   margin: 0;
   font-size: 0.89rem;
   line-height: 1.2;
+}
+.movie__info .info__year {
+  font-size: 0.79rem;
+  color: #331c1c;
+  font-weight: 600;
 }
 .movie__info .info__vote-average {
   margin-left: 1rem;
