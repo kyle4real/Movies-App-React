@@ -1,8 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 // COLORS
-$bgColor: rgb(49, 19, 104);
+$bgColor: rgb(26, 19, 97);
+$bgColorWhite: rgb(224, 224, 224);
 $textColor: rgb(247, 247, 247);
 
 // TYPOGRAPHY
 $fontStack: "Poppins", sans-serif;
+
+// BREAKPOINTS
+
+@mixin breakpoint($point) {
+    @if $point == lar {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    } @else if $point == mid {
+        @media (min-width: 678px) {
+            @content;
+        }
+    } @else if $point == sm {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+}
