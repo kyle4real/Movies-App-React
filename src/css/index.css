@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 @import "swiper/swiper.min.css";
+@import "swiper/components/effect-fade/effect-fade.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
 * {
   box-sizing: border-box;
@@ -168,6 +169,7 @@ header {
   cursor: pointer;
   font-size: 1.4rem;
   border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .heroslide__container .content .cta__play i, .heroslide__container .content .cta__myList i {
   margin-right: 0.7rem;
@@ -175,11 +177,15 @@ header {
 .heroslide__container .content .cta__play {
   margin-right: 1rem;
 }
+.heroslide__container .content .cta button:hover {
+  background: white;
+  color: #202020;
+}
 .heroslide__container .content__overview {
   font-size: 1.2rem;
   letter-spacing: 1.2px;
-  line-height: 1.4;
-  text-shadow: 0px 3px 8px rgba(32, 32, 32, 0.3);
+  line-height: 1.5;
+  text-shadow: 3px 6px 8px rgba(32, 32, 32, 0.9);
 }
 
 .movie__container {

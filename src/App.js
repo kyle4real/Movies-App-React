@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, EffectFade } from "swiper/core";
 import Nav from "./components/Nav";
 import Movie from "./components/Movie";
 import HeroSlide from "./components/HeroSlide";
@@ -39,6 +40,8 @@ function App() {
         console.log(searchTerm);
     };
 
+    SwiperCore.use([Autoplay, EffectFade]);
+
     return (
         <>
             <Nav
@@ -47,7 +50,16 @@ function App() {
                 searchTerm={searchTerm}
             />
             <div className="hero__container">
-                <Swiper slidesPerView={1}>
+                <Swiper
+                    slidesPerView={1}
+                    effect={"fade"}
+                    speed={2000}
+                    loop={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                >
                     {movies.slice(0, 3).map((movie) => (
                         <SwiperSlide>
                             <HeroSlide key={movie.id} {...movie} />
