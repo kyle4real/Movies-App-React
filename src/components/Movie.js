@@ -10,7 +10,7 @@ const setVoteBorder = (vote) => {
     }
 };
 
-function Movie({ title, poster_path, overview, vote_average, release_date }) {
+const Movie = ({ title, poster_path, overview, vote_average, release_date }) => {
     const year = new Date(release_date).getFullYear();
     return (
         <div className="movie" style={poster_path ? {} : { display: "none" }}>
@@ -35,6 +35,6 @@ function Movie({ title, poster_path, overview, vote_average, release_date }) {
             </div>
         </div>
     );
-}
+};
 
 export default Movie;
