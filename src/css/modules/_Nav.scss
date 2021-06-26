@@ -20,22 +20,49 @@ header {
     justify-content: flex-end;
 }
 
-.search__bar {
-    border-radius: 5px;
+.nav__form {
+    position: relative;
+    display: flex;
     border: 1px solid white;
-    outline: none;
-    font-family: inherit;
-    font-size: 1rem;
-    color: $textColor;
-    background: transparent;
-    padding: 0.5rem 1.5rem;
-    transition: background 0.2s ease;
+    border-radius: 5px;
 
-    &::placeholder {
-        color: white;
+    &--search {
+        outline: none;
+        border: none;
+        font-family: inherit;
+        font-size: 1rem;
+        color: $textColor;
+        background: transparent;
+        padding: 0.5rem 1.25rem;
+        height: 40px;
+        transition: background 0.2s ease;
+        text-shadow: 0 0 2px black;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:focus {
+            background: lighten($bgColor, 20%);
+            border-radius: 5px;
+        }
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
     }
-
-    &:focus {
-        background: lighten($bgColor, 20%);
+    .fa-search {
+        display: block;
+        top: 0;
+        right: 0;
+        background: $bgColor;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+        border-left: 1px solid white;
+        cursor: pointer;
     }
 }

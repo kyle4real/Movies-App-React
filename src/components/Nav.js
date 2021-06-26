@@ -17,14 +17,15 @@ const Nav = ({ handleOnSubmit, handleOnChange, searchTerm }) => {
     return (
         <header className={nav ? "header setNav" : "header"}>
             <div className={"nav container"}>
-                <form onSubmit={handleOnSubmit}>
+                <form className="nav__form" onSubmit={handleOnSubmit}>
                     <input
-                        className="search__bar"
+                        className="nav__form--search"
                         type="search"
-                        placeholder="Search..."
+                        placeholder="search"
                         value={searchTerm}
                         onChange={handleOnChange}
                     />
+                    <i className="fas fa-search" onClick={handleOnSubmit}></i>
                 </form>
             </div>
         </header>
