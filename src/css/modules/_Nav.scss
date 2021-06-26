@@ -1,8 +1,16 @@
 header {
+    position: fixed;
+    top: 0;
     z-index: 1000;
     width: 100%;
-    background: lighten($bgColor, 30%);
-    height: 6rem;
+    height: 4rem;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.setNav {
+    background: lighten($bgColor, 20%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav {
@@ -13,18 +21,18 @@ header {
 }
 
 .search__bar {
-    border-radius: 50px;
-    border: 2px solid $bgColor;
+    border-radius: 5px;
+    border: 1px solid white;
     outline: none;
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $textColor;
     background: transparent;
     padding: 0.5rem 1.5rem;
     transition: background 0.2s ease;
 
     &::placeholder {
-        color: $bgColor;
+        color: white;
     }
 
     &:focus {

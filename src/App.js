@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Nav from "./components/Nav";
 import Movie from "./components/Movie";
 import HeroSlide from "./components/HeroSlide";
 
@@ -40,19 +41,11 @@ function App() {
 
     return (
         <>
-            <header>
-                <div className="nav container">
-                    <form onSubmit={handleOnSubmit}>
-                        <input
-                            className="search__bar"
-                            type="search"
-                            placeholder="Search..."
-                            value={searchTerm}
-                            onChange={handleOnChange}
-                        />
-                    </form>
-                </div>
-            </header>
+            <Nav
+                handleOnSubmit={handleOnSubmit}
+                handleOnChange={handleOnChange}
+                searchTerm={searchTerm}
+            />
             <div className="hero__container">
                 <Swiper slidesPerView={1}>
                     {movies.slice(0, 3).map((movie) => (
