@@ -20,9 +20,11 @@ header {
     justify-content: space-between;
 
     &__logo {
+        font-weight: 600;
         color: white;
         font-size: 1.6rem;
         // -webkit-text-stroke: 1px black;
+        text-shadow: 0px 2px 8px rgba(black, 0.2);
 
         &--span {
             margin-left: 2px;
@@ -66,7 +68,7 @@ header {
             display: block;
             top: 0;
             right: 0;
-            background: $bgColor;
+            background: rgba($bgColor, 0.7);
             height: 40px;
             width: 40px;
             display: flex;
@@ -76,6 +78,11 @@ header {
             border-bottom-right-radius: inherit;
             border-left: 1px solid white;
             cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .fa-search:hover {
+            color: $bgColor;
+            background: white;
         }
     }
 }

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 // COLORS
-$bgColor: rgb(32, 32, 32);
+// $bgColor: rgb(32, 32, 32);
+$bgColor: rgb(13, 57, 99);
 $bgColorWhite: rgba(224, 224, 224, 0.9);
 $textColor: rgb(247, 247, 247);
 
@@ -15,7 +16,7 @@ $headerHeight: 4rem;
 
 @mixin breakpoint($point) {
     @if $point == lar {
-        @media (min-width: 1024px) {
+        @media (min-width: 1440px) {
             @content;
         }
     } @else if $point == mid {
