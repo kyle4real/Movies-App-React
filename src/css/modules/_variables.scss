@@ -8,6 +8,9 @@ $textColor: rgb(247, 247, 247);
 // TYPOGRAPHY
 $fontStack: "Poppins", sans-serif;
 
+// HEADER HEIGHT
+$headerHeight: 4rem;
+
 // BREAKPOINTS
 
 @mixin breakpoint($point) {
