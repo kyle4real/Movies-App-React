@@ -19,7 +19,7 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), $bgColor);
+        background: linear-gradient(to bottom, rgb(0, 0, 0, 0.3) 50%, $bgColor);
     }
 
     .content__container {
@@ -38,9 +38,12 @@
         margin-top: 8rem;
 
         &__title {
+            margin: 0;
+            padding: 0;
             font-size: 4rem;
-            text-shadow: 0px 2px 8px rgba(black, 0.2);
+            text-shadow: 0px 2px 8px rgba(black, 0.4);
             margin-bottom: 6rem;
+            line-height: 1;
         }
 
         .cta {
@@ -52,14 +55,14 @@
                 border: none;
                 outline: none;
                 padding: 0.5rem 2.25rem;
-                background: rgba($bgColor, 0.6);
+                background: rgba($bgColor, 0.8);
                 color: white;
                 font-family: inherit;
                 cursor: pointer;
                 font-size: 1.4rem;
                 border-radius: 5px;
                 transition: background 0.2s ease, color 0.2s ease;
-                box-shadow: 0px 2px 4px rgba(black, 0.2);
+                box-shadow: 3px 3px 5px 1px rgba(black, 0.5);
 
                 i {
                     margin-right: 0.7rem;
@@ -77,10 +80,11 @@
         }
 
         &__overview {
+            padding-left: 0.5rem;
             font-size: 1.2rem;
             letter-spacing: 1.2px;
-            line-height: 1.5;
-            text-shadow: 0px 2px 8px rgba(black, 0.2);
+            line-height: 1.4;
+            text-shadow: 0px 2px 8px rgba(black, 0.4);
         }
     }
 }

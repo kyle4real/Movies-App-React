@@ -140,7 +140,7 @@ header {
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #0d3963);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 50%, #0d3963);
 }
 .heroslide__container .content__container {
   z-index: 1000;
@@ -158,9 +158,12 @@ header {
   margin-top: 8rem;
 }
 .heroslide__container .content__title {
+  margin: 0;
+  padding: 0;
   font-size: 4rem;
-  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
   margin-bottom: 6rem;
+  line-height: 1;
 }
 .heroslide__container .content .cta {
   width: 100%;
@@ -170,14 +173,14 @@ header {
   border: none;
   outline: none;
   padding: 0.5rem 2.25rem;
-  background: rgba(13, 57, 99, 0.6);
+  background: rgba(13, 57, 99, 0.8);
   color: white;
   font-family: inherit;
   cursor: pointer;
   font-size: 1.4rem;
   border-radius: 5px;
   transition: background 0.2s ease, color 0.2s ease;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
 }
 .heroslide__container .content .cta__play i, .heroslide__container .content .cta__myList i {
   margin-right: 0.7rem;
@@ -190,10 +193,11 @@ header {
   color: #0d3963;
 }
 .heroslide__container .content__overview {
+  padding-left: 0.5rem;
   font-size: 1.2rem;
   letter-spacing: 1.2px;
-  line-height: 1.5;
-  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .movie__container {
