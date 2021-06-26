@@ -143,22 +143,25 @@ header {
 }
 
 .movie {
-  width: 250px;
+  width: 200px;
   margin: 1rem;
-  background: #6d6d6d;
+  background: #2d2d2d;
   border-radius: 3px;
-  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
+.movie__img-container {
+  height: 300px;
+}
 .movie__img-container img {
-  object-fit: cover;
-  height: 350px;
+  object-fit: contain;
 }
 .movie__info {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
