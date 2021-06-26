@@ -9,7 +9,7 @@ header {
 }
 
 .setNav {
-    background: lighten($bgColor, 20%);
+    background: rgba($bgColor, 0.7);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -20,13 +20,15 @@ header {
     justify-content: space-between;
 
     &__logo {
+        color: white;
         font-size: 1.6rem;
-        -webkit-text-stroke: 1px black;
+        // -webkit-text-stroke: 1px black;
 
         &--span {
+            margin-left: 2px;
             color: $bgColor;
             font-size: 2rem;
-            -webkit-text-stroke: 0.5px white;
+            -webkit-text-stroke: 1px white;
         }
     }
 

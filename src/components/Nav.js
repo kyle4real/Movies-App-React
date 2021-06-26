@@ -17,9 +17,9 @@ const Nav = ({ handleOnSubmit, handleOnChange, searchTerm }) => {
     return (
         <header className={nav ? "header setNav" : "header"}>
             <div className="nav container">
-                <h1 className="nav__logo">
+                <a className="nav__logo" href="/">
                     movie<span className="nav__logo--span">HUB</span>
-                </h1>
+                </a>
                 <form className="nav__form" onSubmit={handleOnSubmit}>
                     <input
                         className="nav__form--search"
