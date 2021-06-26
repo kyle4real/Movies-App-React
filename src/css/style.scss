@@ -1,4 +1,5 @@
 @import "./modules/variables";
+@import "swiper/swiper.min.css";
 
 * {
     box-sizing: border-box;
@@ -30,4 +31,5 @@ img {
     }
 }
 @import "./modules/Nav";
+@import "./modules/HeroSlide";
 @import "./modules/Movie";

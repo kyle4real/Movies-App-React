@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Movie from "./components/Movie";
+import HeroSlide from "./components/HeroSlide";
 
 const AUTH_KEY = "99307a90d6af8639b5ee74b97b40249f";
 
@@ -21,6 +23,7 @@ function App() {
 
     useEffect(() => {
         getMovies();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleOnSubmit = (e) => {
@@ -50,6 +53,15 @@ function App() {
                     </form>
                 </div>
             </header>
+            <div className="hero__container">
+                <Swiper slidesPerView={1}>
+                    {movies.slice(0, 3).map((movie) => (
+                        <SwiperSlide>
+                            <HeroSlide key={movie.id} {...movie} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
             <div className="container">
                 <div className="movie__container">
                     {movies.length > 0 &&
