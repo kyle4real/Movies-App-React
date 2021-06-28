@@ -11,26 +11,29 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=99307a90d
 
 function App() {
     const [movies, setMovies] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    const getMovies = async (search) => {
-        const URL = search ? SEARCH_API + search : FEATURED_API;
-        const moviesRes = await fetch(URL);
+    const searchMovies = async (searchTerm) => {
+        const moviesRes = await fetch(SEARCH_API + searchTerm);
         const data = await moviesRes.json();
-        console.log(data);
-        console.log(searchTerm);
-        setMovies(data.results);
+        setSearchResults(data.results);
     };
 
     useEffect(() => {
+        const getMovies = async () => {
+            const moviesRes = await fetch(FEATURED_API);
+            const data = await moviesRes.json();
+            console.log(data);
+            setMovies(data.results);
+        };
         getMovies();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
         if (!searchTerm) return;
-        getMovies(searchTerm);
+        searchMovies(searchTerm);
         setSearchTerm("");
     };
 
