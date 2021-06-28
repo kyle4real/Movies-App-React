@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, EffectFade } from "swiper/core";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Home from "./components/Home";
 import Nav from "./components/Nav";
-import Movie from "./components/Movie";
-import HeroSlide from "./components/HeroSlide";
 
 const AUTH_KEY = "99307a90d6af8639b5ee74b97b40249f";
 
@@ -40,39 +39,18 @@ function App() {
         console.log(searchTerm);
     };
 
-    SwiperCore.use([Autoplay, EffectFade]);
-
     return (
         <>
-            <Nav
-                handleOnSubmit={handleOnSubmit}
-                handleOnChange={handleOnChange}
-                searchTerm={searchTerm}
-            />
-            <div className="hero__container">
-                <Swiper
-                    slidesPerView={1}
-                    effect={"fade"}
-                    speed={2000}
-                    loop={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    {movies.slice(0, 3).map((movie) => (
-                        <SwiperSlide>
-                            <HeroSlide key={movie.id} {...movie} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-            <div className="container">
-                <div className="movie__container">
-                    {movies.length > 0 &&
-                        movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-                </div>
-            </div>
+            <Router>
+                <Nav
+                    handleOnSubmit={handleOnSubmit}
+                    handleOnChange={handleOnChange}
+                    searchTerm={searchTerm}
+                />
+                <Switch>
+                    <Home movies={movies} />
+                </Switch>
+            </Router>
         </>
     );
 }
