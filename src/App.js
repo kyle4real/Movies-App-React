@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Nav from "./components/Nav";
@@ -11,13 +11,12 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=99307a90d
 
 function App() {
     const [movies, setMovies] = useState([]);
-    const [searchResults, setSearchResults] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
     const searchMovies = async (searchTerm) => {
         const moviesRes = await fetch(SEARCH_API + searchTerm);
         const data = await moviesRes.json();
-        setSearchResults(data.results);
+        setMovies(data.results);
     };
 
     useEffect(() => {
@@ -51,7 +50,7 @@ function App() {
                     searchTerm={searchTerm}
                 />
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home movies={movies} />
                     </Route>
                 </Switch>
