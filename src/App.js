@@ -48,7 +48,9 @@ function App() {
                     searchTerm={searchTerm}
                 />
                 <Switch>
-                    <Home movies={movies} />
+                    <Route path="/">
+                        <Home movies={movies} />
+                    </Route>
                 </Switch>
             </Router>
         </>
