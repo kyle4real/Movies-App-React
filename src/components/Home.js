@@ -1,5 +1,6 @@
 import HeroSlide from "./HeroSlide";
-import Movie from "./Movie";
+import MovieContainer from "./MovieContainer";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectFade } from "swiper/core";
 
@@ -26,10 +27,7 @@ const Home = ({ movies }) => {
                 </Swiper>
             </div>
             <div className="container">
-                <div className="movie__container">
-                    {movies.length > 0 &&
-                        movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-                </div>
+                <MovieContainer movies={movies} />
             </div>
         </>
     );
